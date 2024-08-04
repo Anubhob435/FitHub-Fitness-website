@@ -28,3 +28,7 @@ The website is built using:
 ## Copyright
 
 © 2024 Fithub. All rights reserved.
+
+## Contact
+
+For any inquiries or support, please contact me at: [email@example.com](mailto:email@example.com)
