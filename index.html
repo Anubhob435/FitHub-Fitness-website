@@ -1,35 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>FitHub</title>
+    <script defer src="script.js"></script>
+    <title>FitHub - Your Fitness Journey Starts Here</title>
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-content">
+            <i class="fas fa-dumbbell fa-spin"></i>
+            <p>Loading FitHub...</p>
+        </div>
+    </div>
+
     <header>
-        <h1>FitHub</h1>
+        <div class="logo">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>FitHub</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="workout.html">Workouts</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#articles" class="nav-link">Articles</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <!-- Begin mobile buttons side panel-->
+            <div class="mobile-buttons">
+                <button id="darkModeToggleMobile" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="login.html" class="login-btn">Sign in</a>
+            </div>
+            <!-- End mobile buttons side panel-->
         </nav>
+        <div class="header-right">
+            <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="login.html" class="login-btn">
+                Sign in
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
-    <section id="home">
-        <h2>Welcome to FitHub</h2>
-        <p>Your ultimate fitness destination.</p>
-    </section>
+    <main>
+        <section id="home" class="section-divider">
+            <div class="container">
+                <h1 class="hero-title">Transform Your Life Through Fitness</h1>
+                <p class="hero-subtitle">Join our community of fitness enthusiasts and achieve your health goals</p>
+                <div class="welcome-content">
+                    <h2>Welcome to FitHub</h2>
+                    <p>Your ultimate fitness destination for a healthier, stronger you.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Personal Training</h3>
+                            <p>Get customized workout plans tailored to your goals.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Nutrition Guidance</h3>
+                            <p>Expert advice on maintaining a balanced diet.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Community Support</h3>
+                            <p>Join our fitness community for motivation and support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Add your other sections here -->
+        <section id="blog" class="section-divider">
+            <h2>FitHub Blog</h2>
+            <div class="blog-container">
+                <div class="blog-card">
+                    <h3>10 Tips for a Healthy Lifestyle</h3>
+                    <p>Discover proven strategies to maintain a healthy work-life balance while achieving your fitness goals.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>The Science of Rest Days</h3>
+                    <p>Understanding why rest is crucial for muscle recovery and overall fitness progress.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>Mindful Exercise Practices</h3>
+                    <p>Combining mental wellness with physical fitness for optimal results.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2023 FitHub. All rights reserved.</p>
-    </footer>
+        <section id="articles" class="section-divider">
+            <h2>Fitness Articles</h2>
+            <div class="article-container">
+                <div class="article">
+                    <h3>The Complete Guide to HIIT</h3>
+                    <p>High-Intensity Interval Training: benefits, workouts, and implementation strategies.</p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+                <div class="article">
+                    <h3>Nutrition for Athletes</h3>
+                    <p>Essential nutrients, meal timing, and dietary strategies for peak performance.</p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+                <div class="article">
+                    <h3>Strength Training 101</h3>
+                    <p>A comprehensive guide to building strength and muscle effectively.</p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-divider">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>Get in touch with our fitness experts for personalized advice and support.</p>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="training">Personal Training</option>
+                        <option value="nutrition">Nutrition Advice</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="button" onclick="submitForm()">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
 </body>
 </html>
