@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>FitHub - Your Fitness Journey Starts Here</title>
@@ -30,6 +30,7 @@
                 <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#articles" class="nav-link">Articles</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="workout.html" class="nav-link">Workouts</a></li>
             </ul>
             <!-- Begin mobile buttons side panel-->
             <div class="mobile-buttons">
@@ -38,7 +39,7 @@
                 </button>
                 <a href="login.html" class="login-btn">Sign in</a>
             </div>
-            <!-- End mobile buttons side panedfl-->
+            <!-- End mobile buttons side panel-->
         </nav>
         <div class="header-right">
             <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -56,24 +57,51 @@
 
     <main>
         <section id="home" class="section-divider">
-            <div class="container">
+            <div class="hero-container">
                 <h1 class="hero-title">Transform Your Life Through Fitness</h1>
-                <p class="hero-subtitle">Join our community of fitness enthusiasts and achieve your health goals</p>
+                <p class="hero-subtitle">Join our community of fitness enthusiasts and achieve your health goals with personalized workouts and expert guidance.</p>
+                <div class="hero-actions">
+                    <a href="workout.html" class="cta-button">
+                        Get Started
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="secondary-cta">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+                <div class="stats-container">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Members</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Workout Plans</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">97%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
                 <div class="welcome-content">
-                    <h2>Welcome to FitHub</h2>
+                    <h2>Welcome to <span class="text-gradient">FitHub</span></h2>
                     <p>Your ultimate fitness destination for a healthier, stronger you.</p>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <h3>Personal Training</h3>
-                            <p>Get customized workout plans tailored to your goals.</p>
+                            <h3><i class="fas fa-dumbbell"></i> Personal Training</h3>
+                            <p>Get customized workout plans tailored to your specific goals and fitness level.</p>
+                            <a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
                         </div>
                         <div class="feature-card">
-                            <h3>Nutrition Guidance</h3>
-                            <p>Expert advice on maintaining a balanced diet.</p>
+                            <h3><i class="fas fa-apple-alt"></i> Nutrition Guidance</h3>
+                            <p>Expert advice on maintaining a balanced diet to fuel your fitness journey.</p>
+                            <a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
                         </div>
                         <div class="feature-card">
-                            <h3>Community Support</h3>
-                            <p>Join our fitness community for motivation and support.</p>
+                            <h3><i class="fas fa-users"></i> Community Support</h3>
+                            <p>Join our fitness community for motivation, accountability and support.</p>
+                            <a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -155,6 +183,12 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="scroll-to-top">
+        <button id="scrollTop" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     </div>
 </body>
 </html>
